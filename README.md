@@ -5,7 +5,7 @@ Aplicación web para apoyar la gestión básica de pacientes y citas médicas. E
 
 ## Integrantes
 Esteban López Madera
-Matrícula: 2024-0036
+**Matrícula: 2024-0036**
 
 ## Funcionalidades implementadas
 ### Módulo de pacientes
