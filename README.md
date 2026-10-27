@@ -94,26 +94,34 @@ sistema-citas-medicas/
 - **Lógica de aplicación:** rutas y servicios en `src/routes/` y `src/services/`.
 - **Datos:** persistencia y relaciones en `src/database/db.js`, usando SQLite.
 
-## Pruebas manuales recomendadas
-1. Abrir el panel y comprobar que el servidor carga.
-2. Registrar un paciente y verificar que aparece en la tabla.
-3. Editar el paciente y buscarlo por documento.
-4. Crear una cita para ese paciente y uno de los médicos disponibles.
-5. Crear otra cita para el mismo médico en la misma fecha y hora; debe mostrar un mensaje de conflicto.
-6. Cancelar una cita y comprobar que el estado cambia.
-7. Reiniciar el servidor y verificar que los registros persisten.
+## Pruebas funcionales
 
-## Estado y alcance
-Este es un avance académico para ejecución local, no un sistema listo para uso clínico real. Los módulos de pacientes y citas están implementados en el código, pero deben instalarse y probarse en el equipo antes de declarar la validación completa. No incluye autenticación completa, permisos por rol, despliegue en internet, notificaciones, pagos ni expediente clínico completo. Antes de un uso real serían necesarias pruebas adicionales, controles de seguridad, copias de seguridad y revisión de privacidad.
+Se recomienda realizar las siguientes pruebas para verificar el funcionamiento de los módulos implementados:
 
-## Subirlo a GitHub
-Crea un repositorio vacío en GitHub y, desde esta carpeta, ejecuta:
-```bash
-git init
-git add .
-git commit -m "Entrega 3: estructura inicial y base de datos"
-git branch -M main
-git remote add origin URL_DE_TU_REPOSITORIO
-git push -u origin main
-```
-Después de probar los módulos, realiza commits separados para documentar los cambios. No subas `node_modules/` ni datos de pacientes reales.
+Comprobar que la aplicación inicia correctamente.
+
+Registrar un paciente y verificar que aparece en el listado.
+
+Buscar y actualizar la información de un paciente.
+
+Programar una cita para un paciente con uno de los médicos disponibles.
+
+Intentar registrar dos citas para el mismo médico en la misma fecha y hora, verificando que el sistema rechace el conflicto.
+
+Cambiar el estado de una cita y comprobar que la actualización se refleja en el listado.
+
+Reiniciar el servidor y comprobar que los registros guardados permanecen en la base de datos.
+
+Estado actual del proyecto
+
+El proyecto corresponde a un avance funcional académico desarrollado para la asignatura Programación III. Mantiene una arquitectura monolítica organizada en tres capas: presentación, lógica de negocio y acceso a datos.
+
+Actualmente incluye módulos para la gestión de pacientes y citas médicas, con persistencia local mediante SQLite. La validación completa de todos los escenarios depende de las pruebas realizadas en el entorno de ejecución.
+
+El sistema no está destinado al uso clínico real. Entre las funcionalidades que podrían incorporarse en futuras versiones se encuentran la autenticación completa, los permisos por rol, las notificaciones, los respaldos automatizados y los controles adicionales de seguridad y privacidad.
+
+Autor
+
+Esteban López Madera
+Matrícula: 2024-0036
+Asignatura: Programación III
