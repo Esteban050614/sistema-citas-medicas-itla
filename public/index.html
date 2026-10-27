@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica | Gestión de citas médicas</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">+</span><div><strong>Clínica</strong><small>Gestión médica</small></div></div>
+    <div class="nav-label">MENÚ PRINCIPAL</div>
+    <button class="nav-item active" data-view="dashboard"><span>▦</span> Resumen</button>
+    <button class="nav-item" data-view="patients"><span>♙</span> Pacientes</button>
+    <button class="nav-item" data-view="appointments"><span>▣</span> Citas médicas</button>
+    <div class="sidebar-note"><div class="note-icon">✚</div><strong>Atención organizada</strong><p>Administra pacientes y citas desde un solo lugar.</p></div>
+    <div class="profile"><div class="avatar">AD</div><div><strong>Administrador</strong><small>Panel de gestión</small></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><p class="eyebrow">SISTEMA DE GESTIÓN</p><h1 id="page-title">Resumen general</h1></div><div class="top-actions"><span class="status-dot"></span><span>Base de datos local</span><button id="refresh-btn" class="icon-btn" title="Actualizar">↻</button></div></header>
+    <section id="dashboard-view" class="view">
+      <div class="welcome"><div><p class="eyebrow light">PANEL DE CONTROL</p><h2>Una atención más organizada.</h2><p>Consulta los pacientes y mantén las citas médicas al día.</p></div><div class="welcome-symbol">✚</div></div>
+      <div class="stats">
+        <article class="stat-card"><div class="stat-top"><span>Total de pacientes</span><span class="stat-icon blue">♙</span></div><strong id="stat-patients">0</strong><small>Pacientes registrados</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Citas registradas</span><span class="stat-icon purple">▣</span></div><strong id="stat-appointments">0</strong><small>En el sistema</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Pendientes</span><span class="stat-icon orange">◷</span></div><strong id="stat-pending">0</strong><small>Por atender o confirmar</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Confirmadas</span><span class="stat-icon green">✓</span></div><strong id="stat-confirmed">0</strong><small>Citas confirmadas</small></article>
+      </div>
+      <div class="panel"><div class="panel-heading"><div><h3>Citas recientes</h3><p>Las últimas citas registradas en el sistema</p></div><button class="text-btn" data-go="appointments">Ver todas →</button></div><div class="table-wrap"><table><thead><tr><th>PACIENTE</th><th>MÉDICO</th><th>FECHA Y HORA</th><th>ESTADO</th></tr></thead><tbody id="recent-table"></tbody></table></div></div>
+    </section>
+    <section id="patients-view" class="view hidden">
+      <div class="section-intro"><div><h2>Pacientes</h2><p>Registra y mantén actualizada la información de los pacientes.</p></div><button class="primary-btn" id="new-patient-btn">＋ Nuevo paciente</button></div>
+      <div class="toolbar"><input id="patient-search" type="search" placeholder="Buscar por nombre o documento..."><span id="patient-count" class="muted"></span></div>
+      <div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>NOMBRE</th><th>DOCUMENTO</th><th>TELÉFONO</th><th>CORREO</th><th>ACCIONES</th></tr></thead><tbody id="patients-table"></tbody></table></div></div>
+    </section>
+    <section id="appointments-view" class="view hidden">
+      <div class="section-intro"><div><h2>Citas médicas</h2><p>Programa citas y revisa el estado de cada atención.</p></div><button class="primary-btn" id="new-appointment-btn">＋ Nueva cita</button></div>
+      <div class="toolbar"><input id="appointment-search" type="search" placeholder="Buscar paciente, médico o motivo..."><select id="status-filter"><option value="">Todos los estados</option><option>Pendiente</option><option>Confirmada</option><option>Cancelada</option><option>Atendida</option></select></div>
+      <div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>PACIENTE</th><th>MÉDICO / ESPECIALIDAD</th><th>FECHA Y HORA</th><th>MOTIVO</th><th>ESTADO</th><th>ACCIONES</th></tr></thead><tbody id="appointments-table"></tbody></table></div></div>
+    </section>
+  </main>
+  <div id="modal" class="modal hidden"><div class="modal-backdrop" data-close></div><div class="modal-card"><div class="modal-heading"><div><p class="eyebrow">GESTIÓN DE DATOS</p><h2 id="modal-title">Nuevo registro</h2></div><button class="close-btn" data-close>×</button></div><form id="modal-form"><div id="form-fields" class="form-grid"></div><p id="form-error" class="form-error"></p><div class="modal-footer"><button type="button" class="secondary-btn" data-close>Cancelar</button><button type="submit" class="primary-btn" id="save-btn">Guardar</button></div></form></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

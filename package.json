@@ -1,0 +1,14 @@
+{
+  "name": "sistema-citas-medicas",
+  "version": "1.0.0",
+  "description": "Avance funcional - Sistema de Gestión de Citas Médicas",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2"
+  }
+}
