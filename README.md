@@ -125,5 +125,3 @@ El sistema no está destinado al uso clínico real. Entre las funcionalidades qu
 Esteban López Madera
 
 Matrícula: 2024-0036
-
-Asignatura: Programación III
