@@ -112,7 +112,7 @@ Cambiar el estado de una cita y comprobar que la actualización se refleja en el
 
 Reiniciar el servidor y comprobar que los registros guardados permanecen en la base de datos.
 
-Estado actual del proyecto
+## Estado actual del proyecto
 
 El proyecto corresponde a un avance funcional académico desarrollado para la asignatura Programación III. Mantiene una arquitectura monolítica organizada en tres capas: presentación, lógica de negocio y acceso a datos.
 
@@ -120,8 +120,10 @@ Actualmente incluye módulos para la gestión de pacientes y citas médicas, con
 
 El sistema no está destinado al uso clínico real. Entre las funcionalidades que podrían incorporarse en futuras versiones se encuentran la autenticación completa, los permisos por rol, las notificaciones, los respaldos automatizados y los controles adicionales de seguridad y privacidad.
 
-Autor
+## Autor
 
 Esteban López Madera
+
 Matrícula: 2024-0036
+
 Asignatura: Programación III
