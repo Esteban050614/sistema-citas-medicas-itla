@@ -4,7 +4,7 @@
 Aplicación web para apoyar la gestión básica de pacientes y citas médicas. Este avance conserva el enfoque de arquitectura monolítica en tres capas: presentación, lógica de negocio y acceso a datos.
 
 ## Integrantes
-- Esteban López Madera
+- Esteban López Madera      Matrícula: 2024-0036
 
 ## Funcionalidades implementadas
 ### Módulo de pacientes
@@ -120,8 +120,4 @@ Actualmente incluye módulos para la gestión de pacientes y citas médicas, con
 
 El sistema no está destinado al uso clínico real. Entre las funcionalidades que podrían incorporarse en futuras versiones se encuentran la autenticación completa, los permisos por rol, las notificaciones, los respaldos automatizados y los controles adicionales de seguridad y privacidad.
 
-## Autor
 
-Esteban López Madera
-
-Matrícula: 2024-0036
